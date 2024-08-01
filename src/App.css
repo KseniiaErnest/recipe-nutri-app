@@ -13,6 +13,7 @@ html {
 
 body {
   font-family: 'Merriweather';
+  background-color: #f5e4cd;
 }
 
 .App {
@@ -48,9 +49,51 @@ h3 {
 
 .img-small {
   border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .search-bar {
   width: 80%;
   font-size: 2rem;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  font-family: 'Merriweather';
+  background-color: #fefcfa;
+  color: #181714;
+  border: none;
+}
+
+.recipe-container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+  align-items: center;
+  margin-top: 3rem;
+  background-color: #fcf7f0;
+  border-radius: 1.5rem;
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.recipe-info_sub {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.recipe-ingredients {
+  list-style: none;
+  text-align: left;
+}
+
+.recipe-ingredients li {
+  padding: 0.5rem;
 }

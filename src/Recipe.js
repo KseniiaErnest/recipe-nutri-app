@@ -21,9 +21,25 @@ getOneRecipe();
 
   if (!recipe) return <p>Recipe is not found</p>
   return (
+    <div className='recipe-container'>
     <div>
+    <img className='img-small' src={recipe.images?.LARGE?.url || recipe.images?.REGULAR?.url || recipe.images?.SMALL?.url} alt={recipe.label}/>
+    </div>
+    <div className='recipe-info'>
       <h1>{recipe.label}</h1>
-      <p>{recipe.calories}</p>
+      <div className='recipe-info_sub'>
+      <p>Total time: {recipe.totalTime} minutes</p>
+      <p>Calories: {recipe.calories.toFixed(2)}</p>
+      </div>
+      <h2>Ingredients</h2>
+      <ul className='recipe-ingredients'>
+        {recipe.ingredients.map((ing, index) => (
+          <li key={index}>{ing.text}</li>
+        ))
+}
+      </ul>
+      <a className='link' href={recipe.url} target='_blank' rel="noreferrer">More about recipe</a>
+      </div>
     </div>
   )
 }

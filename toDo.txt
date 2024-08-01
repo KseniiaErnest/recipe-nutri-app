@@ -1,0 +1,5 @@
+- Error handling
+- Add image for when there is no image
+- Nutri function
+- Mobile
+- Home button
