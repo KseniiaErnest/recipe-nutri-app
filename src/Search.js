@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Search({setNutritionSearch, nutritionSearch, searchType,search, setSearch, submittedSearch, setSubmittedSearch, handleNewSearch }) {
+export default function Search({handleNutritionSearch, setNutritionSearch, nutritionSearch, searchType,search, setSearch, handleNewSearch }) {
 
   const searchRecipe = (e) => {
     setSearch(e.target.value);
@@ -16,7 +16,7 @@ export default function Search({setNutritionSearch, nutritionSearch, searchType,
       handleNewSearch(search);
     }
     if (searchType === 'nutrition') {
-      handleNewSearch(nutritionSearch)
+      handleNutritionSearch(nutritionSearch)
     }
     
   }
