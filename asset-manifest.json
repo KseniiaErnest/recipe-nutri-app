@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/recipe-nutri-app/static/css/main.68e00ce4.css",
+    "main.js": "/recipe-nutri-app/static/js/main.d5374ca0.js",
+    "static/js/453.ed30a46f.chunk.js": "/recipe-nutri-app/static/js/453.ed30a46f.chunk.js",
+    "index.html": "/recipe-nutri-app/index.html",
+    "main.68e00ce4.css.map": "/recipe-nutri-app/static/css/main.68e00ce4.css.map",
+    "main.d5374ca0.js.map": "/recipe-nutri-app/static/js/main.d5374ca0.js.map",
+    "453.ed30a46f.chunk.js.map": "/recipe-nutri-app/static/js/453.ed30a46f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68e00ce4.css",
+    "static/js/main.d5374ca0.js"
+  ]
+}
