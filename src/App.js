@@ -34,6 +34,9 @@ setNutritionSearch('');
 
   const handleSelection = (e) => {
     setSearchType(e.target.value);
+    setNutritionData({});
+    setNutritionSearch('');
+    setSubmittedNutriSearch('');
     navigate(e.target.value === 'recipe' ? '/recipes' : '/nutritions');
   };
 
@@ -46,6 +49,8 @@ setNutritionSearch('');
         );
         if (!res.ok) throw new Error(`Error! Status: ${res.status}`);
         const data = await res.json();
+        console.log(data);
+        console.log(data.hits);
         setRecipes(data.hits); 
         setLoader(false);  
       } catch(err) {
@@ -82,7 +87,6 @@ console.log(err);
         }
   
         const data = await res.json();
-        console.log(data, 'calories:', data.calories);
         setNutritionData(data);
 
       }catch(err) {
@@ -100,7 +104,7 @@ console.log(err);
   return (
     <div className="App">
     <header>
-    <Link to={searchType === 'recipe' ? '/recipes' : '/nutritions'} className="home-btn">Home</Link>
+    <Link to={searchType === 'recipe' ? '/recipes' : '/nutritions'} className="home-btn">HOME</Link>
       <Nav handleSelection={handleSelection} />
 
       <Search
